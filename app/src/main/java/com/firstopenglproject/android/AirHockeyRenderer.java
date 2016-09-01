@@ -118,12 +118,12 @@ public class AirHockeyRenderer implements Renderer {
     public void onDrawFrame(GL10 glUnused) {
 // Clear the rendering surface.
         glClear(GL_COLOR_BUFFER_BIT);
-// Draw the table.
+        // Draw the table.
         textureProgram.useProgram();
         textureProgram.setUniforms(projectionMatrix, texture);
         table.bindData(textureProgram);
         table.draw();
-// Draw the mallets.
+        // Draw the mallets.
         colorProgram.useProgram();
         colorProgram.setUniforms(projectionMatrix);
         mallet.bindData(colorProgram);
