@@ -8,33 +8,6 @@
  ***/
 package com.firstopenglproject.android;
 
-import static android.opengl.GLES20.GL_COLOR_BUFFER_BIT;
-import static android.opengl.GLES20.GL_FLOAT;
-import static android.opengl.GLES20.GL_LINES;
-import static android.opengl.GLES20.GL_POINTS;
-import static android.opengl.GLES20.GL_TRIANGLE_FAN;
-import static android.opengl.GLES20.glClear;
-import static android.opengl.GLES20.glClearColor;
-import static android.opengl.GLES20.glDrawArrays;
-import static android.opengl.GLES20.glEnableVertexAttribArray;
-import static android.opengl.GLES20.glGetAttribLocation;
-import static android.opengl.GLES20.glGetUniformLocation;
-import static android.opengl.GLES20.glUniformMatrix4fv;
-import static android.opengl.GLES20.glUseProgram;
-import static android.opengl.GLES20.glVertexAttribPointer;
-import static android.opengl.GLES20.glViewport;
-import static android.opengl.Matrix.multiplyMM;
-import static android.opengl.Matrix.rotateM;
-import static android.opengl.Matrix.setIdentityM;
-import static android.opengl.Matrix.translateM;
-
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.nio.FloatBuffer;
-
-import javax.microedition.khronos.egl.EGLConfig;
-import javax.microedition.khronos.opengles.GL10;
-
 import android.content.Context;
 import android.opengl.GLSurfaceView.Renderer;
 
@@ -43,11 +16,20 @@ import com.firstopenglproject.android.objects.Mallet;
 import com.firstopenglproject.android.objects.Table;
 import com.firstopenglproject.android.programs.ColorShaderProgram;
 import com.firstopenglproject.android.programs.TextureShaderProgram;
-import com.firstopenglproject.android.util.LoggerConfig;
 import com.firstopenglproject.android.util.MatrixHelper;
-import com.firstopenglproject.android.util.ShaderHelper;
-import com.firstopenglproject.android.util.TextResourceReader;
 import com.firstopenglproject.android.util.TextureHelper;
+
+import javax.microedition.khronos.egl.EGLConfig;
+import javax.microedition.khronos.opengles.GL10;
+
+import static android.opengl.GLES20.GL_COLOR_BUFFER_BIT;
+import static android.opengl.GLES20.glClear;
+import static android.opengl.GLES20.glClearColor;
+import static android.opengl.GLES20.glViewport;
+import static android.opengl.Matrix.multiplyMM;
+import static android.opengl.Matrix.rotateM;
+import static android.opengl.Matrix.setIdentityM;
+import static android.opengl.Matrix.translateM;
 
 
 public class AirHockeyRenderer implements Renderer {
